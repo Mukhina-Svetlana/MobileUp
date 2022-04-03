@@ -80,6 +80,10 @@ extension SceneDelegate {
     
     func authServiceSignInDidFail() {
         print(#function)
+        let alert = UIAlertController(title: "Warning!", message:  "Для работы с приложением необходимо подключиться к сети Internet", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(ok)
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
 

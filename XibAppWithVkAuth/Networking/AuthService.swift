@@ -46,7 +46,6 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate{
                 print("authorized")
                 delegate?.authServiceSignIn()
             default:
-                print("Sorry")
                 delegate?.authServiceSignInDidFail()
             }
         }
